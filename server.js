@@ -6,6 +6,8 @@ const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
 
+const PORT = process.env.port || 7878
+
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
@@ -40,6 +42,6 @@ app.get('/users', (req,res) => {
 
 
 
-server.listen(7878,()=>{
-    console.log('http://localhost:7878')
+server.listen(PORT,()=>{
+    // console.log('http://localhost:7878')
 })
