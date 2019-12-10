@@ -55,7 +55,7 @@ $('#message').on('keypress' , (event)=> {
 socket.on('recieved' , async (data)=>{
     // console.log(data.message)
     recieved = data.message
-    renderlist()
+    $('#chat').append(`<div>${recieved}</div>`)
 })
 
 async function renderlist() {
@@ -75,8 +75,9 @@ async function renderlist() {
             itembox.append(item)
             $('#users').append(itembox)
         }
-        if(recieved) $('#chat').append(`<div>${recieved}</div>`)
+        // if(recieved) $('#chat').append(`<div>${recieved}</div>`)
     })
 }
+
 
 // renderlist()
