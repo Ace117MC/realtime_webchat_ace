@@ -6,7 +6,7 @@ const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
 
-const PORT = process.env.port || 7878
+const PORT = process.env.PORT || 7878
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
