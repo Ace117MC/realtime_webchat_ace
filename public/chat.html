@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="bootstrap.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="h3">Your ID : <span id="curid"></span></div>
+        <div class="h2">Available Users</div>
+        <div id="users" class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option1" checked> Active
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2"> Radio
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3"> Radio
+            </label>
+        </div>
+        <br><br>
+        <div class="input-group row">
+            <!-- <input type="text" class="form-control mx-1 col-3" id="name" placeholder="Your Name"> -->
+            <input type="text" class="form-control mx-2 col-9" id="message" placeholder="Message">
+            <button type="button" class="btn btn-success" id="send">SEND</button>
+        </div>
+        <br>
+        <div id="chat">
+
+        </div>
+    </div>
+</body>
+</html>
