@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize')
 let db
 
-if(process.env.CLEARDB_DATABASE_URL) {
-    db = new Sequelize(process.env.CLEARDB_DATABASE_URL)
+if(process.env.DATABASE_URL) {
+    db = new Sequelize(process.env.DATABASE_URL)
 } else {
     db = new Sequelize({
         dialect: 'sqlite',
