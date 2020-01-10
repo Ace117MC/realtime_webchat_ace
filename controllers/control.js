@@ -23,7 +23,7 @@ async function finduser(user) {
 async function messages(id,reciever) {
     const mess = await (Chat.findAll({
         include: [{model: User}],
-        where: { '$user.Id$': id,reciever: reciever}
+        where: { '$user.id$': id,reciever: reciever}
     })).map(mes => mes.message)
     return mess
 }
