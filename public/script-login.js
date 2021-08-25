@@ -8,9 +8,9 @@ $('#new-userbutton').on('click' ,async () => {
         .fail(()=>{
             $.post('/api/user', {
                 user: $('#new-user').val()
-            }).then(
+            }).done(()=>{
                 window.location = '/chat.html?username='+$('#new-user').val()
-            )
+            })
         })
     }
 })
@@ -25,9 +25,9 @@ $('#new-user').on('keypress' ,async (event) => {
         .fail(()=>{
             $.post('/api/user', {
                 user: $('#new-user').val()
-            }).then(
+            }).done(() => {
                 window.location = '/chat.html?username='+$('#new-user').val()
-            )
+            })
         })
     }
 })
